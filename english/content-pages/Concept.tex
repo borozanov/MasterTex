@@ -1,0 +1,126 @@
+%\setchapterpreamble[u]{}
+
+\chapter{Concept} \label{chap:Concept}
+\minitoc\vspace{1em}
+
+\section{Background}
+\todo{Intro in the concept}
+
+\section{Graph Theory}
+\subsection{Labeled Graphs}
+Graph $G = (V,E)$ is a finite non-empty set of vertices $V = {v_{1}, v_{2}, …}$ with a set of edges $E = {e_{1}, e_{2}, …}$ that connect pairs of vertices.
+If the edges have direction, then the $G$ is a directed graph (digraph). 
+An ordered pair describes the directionality of an edge e in digraph $G: e = (u,v)$,
+where $u$ is the starting vertex (source) and $v$ is the ending vertex (target). 
+
+A labeled graph $G$ is a graph where vertices or edges are associated with labels \ref{Champin2003}. 
+More precise, given a finite set of vertex labels $L_{V}$ and a finite set of edge labels $L_{E}$, a labeled graph is defined by a the tuple $G = (V, E, r_{V} , r_{E})$ such that:
+
+\begin{itemize}
+	\item[--]  $V$ is a finite set of vertices,
+	\item[--] $r_{V} \subseteq V \times L_{V}$ is the function that assigns labels to vertices
+	\item[--]  $r_{E} \subseteq V \times V \times L_{E}$ is the function that assigns labels to edges
+\end{itemize}
+
+The tuples from $r_{V}$ and $ r_{E} $ describe the vertex features and edge features of $ G $ respectively. 
+
+%For labeled directed graphs, the set of edges is now formally described with additional parameter $l$ that corresponds to the label:
+%\begin{equation}
+% E = \{(u, v) | \exists l, (u, v, l) \in r_{E}\}
+%\end{equation}
+
+\subsection{Node Ranking}
+Ranking the nodes (vertices) reflects their importance within a graph. 
+Based on the link structure, we estimate how relevant certain node is.
+The very straightforward way for computing a rank is the degree of the node: the number of incoming and outgoing  edges from a node. However, this doesn’t propagate the score throughout the nodes.
+
+To overcome this, we use the PageRank (PR) algorithm \ref{PageRank}. PR ranks all the node in a graph by forming a probability distribution i.e.\ the cumulative score of all PR scores sums up to one. 
+
+PR will assign high score to a node if: (1) there are many nodes pointing to it and (2) those nodes also have high PR score.
+
+
+\begin{equation}
+	PR(X) = (1-d) + d(\dfrac{PR(V_{1})}{O(V_{1})} + ... + \dfrac{PR(V_{N})}{O(V_{N})})
+\end{equation}
+\todo{Explain PR algorithm}
+
+\subsection{Graph Comparison}
+\subsubsection{Isomorphism}
+\subsubsection{Maximum Common Subgraph}
+\subsubsection{Node Coverage}
+
+\section{Similarity}
+\subsection{Introduction}
+The concept of similarity appears in almost every scientific domain. It is defined by similarity measure based on object representations.
+Similarity measure (similarity function) is a function that quantifies how closely related are two objects. 
+In other words, by using similarity as criterion, we can evaluate the likeliness between objects. 
+
+If we consider the following spaces: 
+\begin{itemize}
+	\item[--]  $\mathds{X}$ denotes the set of the data objects
+	\item[--]  $\mathds{F}$ denotes the feature space
+	\item[--]  $\mathds{R} ^  \mathds{F}$ denotes the space of all feature representations
+\end{itemize}
+
+then a similarity model $S:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$ defined $\forall x,y \in \mathds{X}$ as:
+\begin{equation}
+	S(x,y) = s(f_{x},f_{y})
+\end{equation}
+
+where $f$ 
+
+Similarity function $s$ is subject to the following properties: \ref{Santini}:
+
+\begin{itemize}
+	\item Symmetry: $\forall x,y \in \mathds{X}: s(x,y) = s(y,x)$ - the order of the objects in the input should not affect the output score
+	\item Maximum self-similarity: $\forall x,y \in \mathds{X}: s(x,x) \geqslant s(x,y)$ - nothing can be more similar than the object itself
+\end{itemize}
+
+For applying similarity function, an object representation is needed with a corresponding distance function. 
+Object representation allows us to extract the features from the given data objects. 
+Depending on the domain, different feature extraction methods can be applied. 
+
+The distance function allows us to give score for the closeness between the corresponding features.
+It directly corresponds to the dissimilarity measure: it gets value close to zero for objects which are similar (i.e. close) to each other. 
+In other words, similar objects tend to have short distances between one another.
+
+For function $d:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$ to qualify as distance, in needs to fulfill the following constraints \ref{Deza.Deza2009EncyclopediaofDistances}:
+\begin{itemize}
+	\item Non-negativity: $\forall x,y \in \mathds{X}: d(x,y) \leqslant 0$
+	\item Reflexivity: $\forall x \in \mathds{X}: d(x,x) = 0$
+	\item Symmetry: $\forall x,y \in \mathds{X}: d(x,y) = d(y,x)$
+\end{itemize}
+
+Further more, a distance $d$ is a metric, if it additionally satisfies the following properties:
+\begin{itemize}
+	\item Identity of indiscernibles: $\forall x,y \in \mathds{X}: d(x,y) = 0 \Leftrightarrow x=y$
+	\item Triangle inequality: $\forall x,y,z \in \mathds{X}: d(x,y) \leqslant d(x,z) + d(y,z)$
+\end{itemize}
+
+\subsubsection{Conversion form distance to similarity}
+
+The conversion from distance to similarity may differ. 
+Any monotonically decreasing transformation can be applied to convert similarity measures into dissimilarity measures, 
+and any monotonically increasing transformation can be applied to convert the similarity to distance.
+\todo{Cite lecture notes}\url{http://users.csc.calpoly.edu/~dekhtyar/560-Fall2009/lectures/lec09.466.pdf}
+
+If the similarity values are normalized in the range from 0 to 1 (degree of similarity), then the corresponding dissimilarity can be expressed as : 
+\begin{equation}
+d(x,y) = 1 - s(x,y)
+\label{disi}
+\end{equation}
+
+
+\subsection{Binary Similarity}
+The binary similarity corresponds to exact matching. 
+
+\begin{equation}
+	\forall x,y \in \mathds{X}: s(x,y)=
+	\begin{cases}
+	1  & \quad \text{if } x=y \\
+	0  & \quad \text{else }\\
+	\end{cases}
+	\label{binary} 
+\end{equation}
+
+Although very restrictive, the binary similarity can be easily applied to any domain. 

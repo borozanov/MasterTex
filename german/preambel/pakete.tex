@@ -1,0 +1,66 @@
+%-Document---------------------------------------------------------------------
+\usepackage[automark,ilines]{scrpage2}
+\usepackage{scrhack}
+\usepackage{a4}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext} %TODO remove when your thesis is done
+%-Fonts------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{courier} % used for listings
+%-Additional Symbols-----------------------------------------------------------
+%\usepackage{latexsym}
+%\usepackage{textcomp}
+%-Colors-----------------------------------------------------------------------
+\usepackage[pdftex,usenames]{xcolor}
+%-Hyphenation------------------------------------------------------------------
+\usepackage[none]{hyphenat}
+%-Images-----------------------------------------------------------------------
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+%-TikZ-------------------------------------------------------------------------
+%\usepackage{tikz}
+%\usepackage{tikz-qtree}
+%-Tables-----------------------------------------------------------------------
+%\usepackage{tabularx}
+\usepackage{booktabs} % professional latex tables
+\usepackage{longtable} % for multi-page tables
+%-Enumeration------------------------------------------------------------------
+\usepackage{enumitem}
+%-Listings---------------------------------------------------------------------
+\usepackage{listings}
+\usepackage{resourcen/pakete/lstcustom} % you can use style=eclipse in lsting options
+%-Minitoc----------------------------------------------------------------------
+\usepackage[english,tight]{minitoc}
+%-Citation---------------------------------------------------------------------
+%\usepackage[babel]{csquotes}
+%-Layout-----------------------------------------------------------------------
+\usepackage{setspace} % used by titlepage
+\usepackage{geometry} % used by titlepage
+\usepackage[absolute]{textpos} % used by titlepage
+\usepackage{url}
+%-PDF--------------------------------------------------------------------------
+%\usepackage{pdfpages}
+\usepackage[%
+  bookmarks,%
+  bookmarksopen=false,%
+  hyperfootnotes=false,%
+  pdftitle={\TITLEENG},%
+  pdfauthor={\AUTHOR},%
+  plainpages=false,% for pdf bookmarks
+  pdfpagelabels% for pdf bookmarks
+]{hyperref} % should be last before index and glossary
+%-Indexing---------------------------------------------------------------------
+\usepackage{makeidx}
+%-Glossary---------------------------------------------------------------------
+\usepackage[
+  nonumberlist, % no page numbers in glossary
+  toc%
+]{glossaries}
+%-MISC-------------------------------------------------------------------------
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{forloop} 

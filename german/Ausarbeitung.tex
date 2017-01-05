@@ -1,0 +1,82 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[
+  11pt,
+  a4paper,
+  cleardoublepage=empty,
+  bibliography=totoc,
+  index=totoc,
+  numbers=noenddot
+]{scrbook}
+
+% NOTE! Save all .tex files in ASCII if you want to use umlauts [äöüß]
+
+% Search for HERE keyword.
+% These are the references to you might want to change. ;)
+
+%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{preambel/meta} % HERE are your personal information: name, title, etc.
+\input{preambel/pakete} % HERE you CAN add or remove packages
+\input{preambel/einstellungen} % HERE you CAN define settings for your document
+\input{preambel/kommandos} % HERE you CAN define custom commands, environments, etc.
+
+%-create index and glossaries--------------------------------------------------
+\makeindex
+\makeglossaries
+\glsdisablehyper
+\input{inhaltslose-seiten/glossar} % HERE you CAN define your glossary
+
+%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+  \dominitoc % generate minitocs
+
+  \pagenumbering{alph}
+  \pagestyle{empty} % no page style for following chapters until \frontmatter
+                    % \thispagestyle{empty} after \chapter{} is still needed
+  %-Title----------------------------------------------------------------------
+  \input{inhaltslose-seiten/titel}
+  \input{inhaltslose-seiten/versicherung}
+  \input{inhaltslose-seiten/danksagung} % HERE you CAN write your acknowledgment
+  \input{inhaltslose-seiten/kurzdarstellung} % HERE is your abstract
+
+  \frontmatter
+  %-Table of Contents----------------------------------------------------------
+  \tableofcontents
+  %-List of Tables-------------------------------------------------------------
+  \listoftables
+  %-List of Figures------------------------------------------------------------
+  \listoffigures
+  %-List of Listings-----------------------------------------------------------
+  \lstlistoflistings
+  \cleardoublepage
+
+  \mainmatter
+  \pagestyle{scrheadings} % use custom heading style
+  %-Content--------------------------------------------------------------------
+  % HERE is your content
+  \input{inhaltliche-seiten/einleitung}
+  \input{inhaltliche-seiten/hintergrund}
+  \input{inhaltliche-seiten/konzept}
+  \input{inhaltliche-seiten/umsetzung}
+  \input{inhaltliche-seiten/evaluation}
+  \input{inhaltliche-seiten/ausblick}
+
+  %-Appendix-------------------------------------------------------------------
+  \cleardoublepage
+  \appendix
+  \input{inhaltliche-seiten/anhang} % HERE is the appendix
+
+  \backmatter
+  %-Bibliography---------------------------------------------------------------
+  \cleardoublepage
+  \bibliographystyle{alpha}
+  \bibliography{resourcen/bibliography}
+
+  %-Glossary-------------------------------------------------------------------
+  \cleardoublepage
+  %\glsaddall % do not use for your thesis
+  \printglossaries
+
+  %-Index----------------------------------------------------------------------
+  \cleardoublepage
+  \printindex
+\end{document}

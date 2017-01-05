@@ -1,0 +1,103 @@
+%-Black%White------------------------------------------------------------------
+\newif\ifisbw % default is false
+%\isbwtrue % uncomment this to make titlepage black&white
+
+%-Colors-----------------------------------------------------------------------
+% RWTH colors
+\definecolor{rwth-blue}{cmyk}{1,.5,0,0}\colorlet{rwth-lblue}{rwth-blue!50}\colorlet{rwth-llblue}{rwth-blue!25}
+\definecolor{rwth-violet}{cmyk}{.6,.6,0,0}\colorlet{rwth-lviolet}{rwth-violet!50}\colorlet{rwth-llviolet}{rwth-violet!25}
+\definecolor{rwth-purple}{cmyk}{.7,1,.35,.15}\colorlet{rwth-lpurple}{rwth-purple!50}\colorlet{rwth-llpurple}{rwth-purple!25}
+\definecolor{rwth-carmine}{cmyk}{.25,1,.7,.2}\colorlet{rwth-lcarmine}{rwth-carmine!50}\colorlet{rwth-llcarmine}{rwth-carmine!25}
+\definecolor{rwth-red}{cmyk}{.15,1,1,0}\colorlet{rwth-lred}{rwth-red!50}\colorlet{rwth-llred}{rwth-red!25}
+\definecolor{rwth-magenta}{cmyk}{0,1,.25,0}\colorlet{rwth-lmagenta}{rwth-magenta!50}\colorlet{rwth-llmagenta}{rwth-magenta!25}
+\definecolor{rwth-orange}{cmyk}{0,.4,1,0}\colorlet{rwth-lorange}{rwth-orange!50}\colorlet{rwth-llorange}{rwth-orange!25}
+\definecolor{rwth-yellow}{cmyk}{0,0,1,0}\colorlet{rwth-lyellow}{rwth-yellow!50}\colorlet{rwth-llyellow}{rwth-yellow!25}
+\definecolor{rwth-grass}{cmyk}{.35,0,1,0}\colorlet{rwth-lgrass}{rwth-grass!50}\colorlet{rwth-llgrass}{rwth-grass!25}
+\definecolor{rwth-green}{cmyk}{.7,0,1,0}\colorlet{rwth-lgreen}{rwth-green!50}\colorlet{rwth-llgreen}{rwth-green!25}
+\definecolor{rwth-cyan}{cmyk}{1,0,.4,0}\colorlet{rwth-lcyan}{rwth-cyan!50}\colorlet{rwth-llcyan}{rwth-cyan!25}
+\definecolor{rwth-teal}{cmyk}{1,.3,.5,.3}\colorlet{rwth-lteal}{rwth-teal!50}\colorlet{rwth-llteal}{rwth-teal!25}
+\definecolor{rwth-silver}{cmyk}{.39,.31,.32,.14}
+\definecolor{rwth-gold}{cmyk}{.35,.46,.7,.35}
+
+\def\blue#1{\textcolor{rwth-blue}{#1}}\renewcommand{\blue}[2][100]{\textcolor{rwth-blue!#1}{#2}}
+\def\violet#1{\textcolor{rwth-violet}{#1}}\renewcommand{\violet}[2][100]{\textcolor{rwth-violet!#1}{#2}}
+\def\purple#1{\textcolor{rwth-purple}{#1}}\renewcommand{\purple}[2][100]{\textcolor{rwth-purple!#1}{#2}}
+\def\carmine#1{\textcolor{rwth-carmine}{#1}}\renewcommand{\carmine}[2][100]{\textcolor{rwth-carmine!#1}{#2}}
+\def\red#1{\textcolor{rwth-red}{#1}}\renewcommand{\red}[2][100]{\textcolor{rwth-red!#1}{#2}}
+\def\magenta#1{\textcolor{rwth-magenta}{#1}}\renewcommand{\magenta}[2][100]{\textcolor{rwth-magenta!#1}{#2}}
+\def\orange#1{\textcolor{rwth-orange}{#1}}\renewcommand{\orange}[2][100]{\textcolor{rwth-orange!#1}{#2}}
+\def\yellow#1{\textcolor{rwth-yellow}{#1}}\renewcommand{\yellow}[2][100]{\textcolor{rwth-yellow!#1}{#2}}
+\def\grass#1{\textcolor{rwth-grass}{#1}}\renewcommand{\grass}[2][100]{\textcolor{rwth-grass!#1}{#2}}
+\def\green#1{\textcolor{rwth-green}{#1}}\renewcommand{\green}[2][100]{\textcolor{rwth-green!#1}{#2}}
+\def\cyan#1{\textcolor{rwth-cyan}{#1}}\renewcommand{\cyan}[2][100]{\textcolor{rwth-cyan!#1}{#2}}
+\def\teal#1{\textcolor{rwth-teal}{#1}}\renewcommand{\teal}[2][100]{\textcolor{rwth-teal!#1}{#2}}
+\def\silver#1{\textcolor{rwth-silver}{#1}}\renewcommand{\silver}[2][100]{\textcolor{rwth-silver!#1}{#2}}
+\def\gold#1{\textcolor{rwth-gold}{#1}}\renewcommand{\gold}[2][100]{\textcolor{rwth-gold!#1}{#2}}
+\def\black#1{\textcolor{black}{#1}}\renewcommand{\black}[2][100]{\textcolor{black!#1}{#2}}
+\def\white#1{\textcolor{white}{#1}}
+
+%-Paths------------------------------------------------------------------------
+\graphicspath{{resources/images/}}
+
+%-Titlepage--------------------------------------------------------------------
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+
+%-Page Header------------------------------------------------------------------
+\setheadsepline{.5pt}
+%\setfootbotline{.5pt}
+%\renewcommand*{\dictumwidth}{.75\textwidth}
+\renewcommand*{\dictumauthorformat}[1]{\textsc{#1}}%\bigskip}
+
+%-Chapter Title----------------------------------------------------------------
+\setkomafont{part}{\LARGE\sffamily}
+\setkomafont{chapter}{\LARGE\sffamily}
+
+%-TOC--------------------------------------------------------------------------
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+
+%-Minitoc----------------------------------------------------------------------
+\setcounter{minitocdepth}{1}
+\renewcommand{\mtcfont}{\small\sffamily}
+\renewcommand{\mtcSfont}{\small\sffamily}
+\renewcommand{\mtcSSfont}{\small\sffamily}
+\renewcommand{\mtcSSSfont}{\small\sffamily}
+\renewcommand{\mtifont}{\large\sffamily}
+
+%-Text-------------------------------------------------------------------------
+\sloppy
+\interfootnotelinepenalty=10000
+%\doublespacing
+\hyphenation{} %no hyphenation
+
+%-Listings---------------------------------------------------------------------
+\renewcommand{\lstlistlistingname}{List of Source Codes}
+\renewcommand{\lstlistingname}{Source Code}
+% general settings
+\lstset {
+  rulesepcolor=\color{black},
+  showspaces=false,
+  showtabs=false,
+  tabsize=4,
+  captionpos=b,
+  numbers=left
+}
+
+%-Glossary---------------------------------------------------------------------
+\newacronymstyle{emph-long-short} % first use is emphasized 
+{%
+  % use the first three lines for both acronyms and entries
+  \ifglsused{\glslabel}{}{\begin{em}}%
+  \ifglshaslong{\glslabel}{\glsgenacfmt}{\glsgenentryfmt}%
+  \ifglsused{\glslabel}{}{\end{em}}%
+  % use the last three lines for entries only
+%  \ifglshaslong{\glslabel}%
+%  {\glsgenacfmt}%
+%  {\ifglsused{\glslabel}{}{\emph{\glsgenentryfmt}}}%
+}
+{%
+  \GlsUseAcrStyleDefs{long-short}%
+}
+\setacronymstyle{emph-long-short}
+\renewcommand*{\glspostdescription}{} % no dot at the end of abbreviations

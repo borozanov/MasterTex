@@ -1,0 +1,28 @@
+%-references-------------------------------------------------------------------
+\newcommand{\pref}[1]{(p.~\pageref{#1})}
+\newcommand{\chapref}[1]{chapter~\ref{#1}}
+\newcommand{\Chapref}[1]{Chapter~\ref{#1}}
+\newcommand{\secref}[1]{section~\ref{#1}}
+\newcommand{\Secref}[1]{Section~\ref{#1}}
+\newcommand{\secpref}[1]{section~\ref{#1} \pref{#1}}
+\newcommand{\Secpref}[1]{Section~\ref{#1} \pref{#1}}
+\newcommand{\figref}[1]{figure~\ref{#1}}
+\newcommand{\Figref}[1]{Figure~\ref{#1}}
+\newcommand{\figpref}[1]{figure~\ref{#1} \pref{#1}}
+\newcommand{\Figpref}[1]{Figure~\ref{#1} \pref{#1}}
+\newcommand{\lstref}[1]{source code~\ref{#1}}
+\newcommand{\Lstref}[1]{Source code~\ref{#1}}
+\newcommand{\lstpref}[1]{source code~\ref{#1} \pref{#1}}
+\newcommand{\Lstpref}[1]{Source code~\ref{#1} \pref{#1}}
+\newcommand{\tabref}[1]{table~\ref{#1}}
+\newcommand{\Tabref}[1]{Table~\ref{#1}}
+\newcommand{\tabpref}[1]{table~\ref{#1}~\pref{#1}}
+\newcommand{\Tabpref}[1]{Table~\ref{#1}~\pref{#1}}
+
+%-lstlisting-------------------------------------------------------------------
+\newcommand{\lstinlineJava}[1]{\lstinline[language=Java,breaklines=true,style=eclipse]$#1$}
+\lstnewenvironment{lstlistingJava}[1]{\lstset{caption={#1}, label={lst:#1}, language=java, style=eclipse}}{}
+
+%-while working on thesis------------------------------------------------------
+\newcommand{\todo}[2]{\textcolor{red}{#1}{\footnote{\textcolor{red}{TODO}: #2}}}
+\newcommand{\comment}[2]{\textcolor{blue}{#1}{\footnote{\textcolor{blue}{COMMENT}: #2}}}

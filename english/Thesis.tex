@@ -1,0 +1,80 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[
+  11pt,
+  a4paper,
+  cleardoublepage=empty,
+  bibliography=totoc,
+  index=totoc
+]{scrbook}
+
+% Search for HERE keyword.
+% These are the references to you might want to change. ;)
+
+%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{preamble/meta} % HERE are your personal information: name, title, etc.
+\input{preamble/packages} % HERE you CAN add or remove packages
+\input{preamble/settings} % HERE you CAN define settings for your document
+\input{preamble/commands} % HERE you CAN define custom commands, environments, etc.
+
+%-create index and glossaries--------------------------------------------------
+\makeindex
+\makeglossaries
+\glsdisablehyper
+\input{non-content-pages/Glossary} % HERE you CAN define your glossary
+
+%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+  \dominitoc % generate minitocs
+
+  \pagenumbering{alph}
+  \pagestyle{empty} % no page style for following chapters until \frontmatter
+                    % \thispagestyle{empty} after \chapter{} is still needed
+  %-Title----------------------------------------------------------------------
+  \input{non-content-pages/Title}
+  \input{non-content-pages/Declaration}
+  \input{non-content-pages/Versicherung}
+  \input{non-content-pages/Acknowledgment} % HERE you CAN write your acknowledgment
+  \input{non-content-pages/Abstract} % HERE is your abstract
+
+  \frontmatter
+  %-Table of Contents----------------------------------------------------------
+  \tableofcontents
+  %-List of Tables-------------------------------------------------------------
+  \listoftables
+  %-List of Figures------------------------------------------------------------
+  \listoffigures
+  %-List of Listings-----------------------------------------------------------
+  \lstlistoflistings
+  \cleardoublepage
+
+  \mainmatter
+  \pagestyle{scrheadings} % use custom heading style
+  %-Content--------------------------------------------------------------------
+  % HERE is your content
+  \input{content-pages/Introduction}
+  \input{content-pages/Background}
+  \input{content-pages/Concept}
+  \input{content-pages/Realization}
+  \input{content-pages/Evaluation}
+  \input{content-pages/Conclusion}
+
+  %-Appendix-------------------------------------------------------------------
+  \cleardoublepage
+  \appendix
+  \input{content-pages/Appendix} % HERE is the appendix
+
+  \backmatter
+  %-Bibliography---------------------------------------------------------------
+  \cleardoublepage
+  \bibliographystyle{alpha}
+  \bibliography{resources/Bibliography}
+
+  %-Glossary-------------------------------------------------------------------
+  \cleardoublepage
+  %\glsaddall % do not use for your thesis
+  \printglossaries
+
+  %-Index----------------------------------------------------------------------
+  \cleardoublepage
+  \printindex
+\end{document}
