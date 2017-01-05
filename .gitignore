@@ -10,3 +10,5 @@ hs_err_pid*
 
 #ignore the pdf file
 Thesis.pdf
+/english/Thesis.log
+/english/Thesis.synctex.gz
