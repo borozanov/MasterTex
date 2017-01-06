@@ -298,4 +298,16 @@ and the edges are aggregated for both elements of the vertex pair:
 
 \todo{Figure}{Figure for SimRank and end result}
 
-\section{Association Rule Mining}
+\section{Association rule mining}
+Association rule mining searches for recurring relationships in dataset.
+More specific, it discovers the associations and correlations among items.
+\subsection{Background}
+Let $I=\{I1,I2,..,Im\}$ be n set of one or more items (also referred as itemset).
+An itemset of length k is labeled as k-itemset.
+
+Let $D$ be the database of transactions where each transaction is a non-empty itemset such that $T \subseteq I$.
+Transaction $T$ is said to contain an itemset $A$  if $A\subseteq T$.
+The goal of association rule mining is given the set of transactions $T$, 
+find association rules that will predict the occurrence of an item $I$ based on the occurrences of other items in the transaction $T$.
+
+An association rule indicated as $A\Rightarrow B$, where $A$ and $B$ are non-empty itemsets.

@@ -26,7 +26,8 @@
 \contentsline {subsection}{\numberline {3.3.3}Example distance and similarity functions using graph structure}{14}{subsection.3.3.3}
 \contentsline {subsubsection}{\nonumberline Neighborhood Random Walk Distance}{14}{section*.21}
 \contentsline {subsubsection}{\nonumberline SimRank}{14}{section*.22}
-\contentsline {section}{\numberline {3.4}Association Rule Mining}{15}{section.3.4}
+\contentsline {section}{\numberline {3.4}Association rule mining}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Background}{16}{subsection.3.4.1}
 \contentsline {chapter}{\numberline {4}Realization}{17}{chapter.4}
 \contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}
