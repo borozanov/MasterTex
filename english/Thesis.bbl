@@ -1,3 +1,46 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{Nav01}
+
+\bibitem[CN04]{Chen:2004:MLE:1316689.1316758}
+Lei Chen and Raymond Ng.
+\newblock On the marriage of lp-norms and edit distance.
+\newblock In {\em Proceedings of the Thirtieth International Conference on Very
+  Large Data Bases - Volume 30}, VLDB '04, pages 792--803. VLDB Endowment,
+  2004.
+
+\bibitem[CS03]{Champin2003}
+Pierre-Antoine Champin and Christine Solnon.
+\newblock {\em Measuring the Similarity of Labeled Graphs}, pages 80--95.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2003.
+
+\bibitem[DD09]{Deza.Deza2009EncyclopediaofDistances}
+Michel~Marie Deza and Elena Deza.
+\newblock {\em Encyclopedia of Distances}.
+\newblock Springer Berlin Heidelberg, 2009.
+
+\bibitem[JM09]{Jurafsky:2009:SLP:1214993}
+Daniel Jurafsky and James~H. Martin.
+\newblock {\em Speech and Language Processing (2Nd Edition)}.
+\newblock Prentice-Hall, Inc., Upper Saddle River, NJ, USA, 2009.
+
+\bibitem[JW02]{Jeh02simrank:a}
+Glen Jeh and Jennifer Widom.
+\newblock Simrank: A measure of structural-context similarity.
+\newblock In {\em In KDD}, pages 538--543, 2002.
+
+\bibitem[Nav01]{Navarro:2001:GTA:375360.375365}
+Gonzalo Navarro.
+\newblock A guided tour to approximate string matching.
+\newblock {\em ACM Comput. Surv.}, 33(1):31--88, March 2001.
+
+\bibitem[Pag]{PageRank}
+{The Anatomy of a Large-Scale Hypertextual Web Search Engine}, howpublished =
+  {\url{http://infolab.stanford.edu/~backrub/google.html}}, note = {Accessed:
+  2017-01-05}.
+
+\bibitem[SJ99]{Santini:1999:SM:317043.317048}
+Simone Santini and Ramesh Jain.
+\newblock Similarity measures.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 21(9):871--883,
+  September 1999.
 
 \end{thebibliography}

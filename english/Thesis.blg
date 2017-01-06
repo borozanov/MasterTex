@@ -5,45 +5,47 @@ The style file: alpha.bst
 Database file #1: resources/Bibliography.bib
 Warning--I didn't find a database entry for "Eclipse"
 Warning--I didn't find a database entry for "ElectronicsEngingeers1990"
-You've used 0 entries,
+Warning--to sort, need author or key in PageRank
+Warning--can't use both author and editor fields in Champin2003
+You've used 8 entries,
             2543 wiz_defined-function locations,
-            562 strings with 4517 characters,
-and the built_in function-call counts, 24 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 10
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
+            623 strings with 6118 characters,
+and the built_in function-call counts, 3207 in all, are:
+= -- 324
+> -- 123
+< -- 4
++ -- 39
+- -- 38
+* -- 209
+:= -- 494
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 42
+chr.to.int$ -- 8
+cite$ -- 11
+duplicate$ -- 144
+empty$ -- 262
+format.name$ -- 46
+if$ -- 688
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 10
+newline$ -- 41
+num.names$ -- 21
+pop$ -- 55
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 53
 quote$ -- 0
-skip$ -- 2
+skip$ -- 132
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 190
+swap$ -- 36
+text.length$ -- 4
+text.prefix$ -- 1
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 2 warnings)
+type$ -- 52
+warning$ -- 2
+while$ -- 33
+width$ -- 10
+write$ -- 102
+(There were 4 warnings)

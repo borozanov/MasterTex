@@ -13,7 +13,7 @@ If the edges have direction, then the $G$ is a directed graph (digraph).
 An ordered pair describes the directionality of an edge e in digraph $G: e = (u,v)$,
 where $u$ is the starting vertex (source) and $v$ is the ending vertex (target). 
 
-A labeled graph $G$ is a graph where vertices or edges are associated with labels \ref{Champin2003}. 
+A labeled graph $G$ is a graph where vertices or edges are associated with labels \cite{Champin2003}. 
 More precise, given a finite set of vertex labels $L_{V}$ and a finite set of edge labels $L_{E}$, a labeled graph is defined by a the tuple $G = (V, E, r_{V} , r_{E})$ such that:
 
 \begin{itemize}
@@ -22,7 +22,7 @@ More precise, given a finite set of vertex labels $L_{V}$ and a finite set of ed
 	\item[--]  $r_{E} \subseteq V \times V \times L_{E}$ is the function that assigns labels to edges
 \end{itemize}
 
-The tuples from $r_{V}$ and $ r_{E} $ describe the vertex features and edge features of $ G $ respectively. 
+The tuples from $r_{V}$ and $ r_{E} $ describe the vertex features and edge features of $G$ respectively. 
 
 %For labeled directed graphs, the set of edges is now formally described with additional parameter $l$ that corresponds to the label:
 %\begin{equation}
@@ -34,7 +34,7 @@ Ranking the nodes (vertices) reflects their importance within a graph.
 Based on the link structure, we estimate how relevant certain node is.
 The very straightforward way for computing a rank is the degree of the node: the number of incoming and outgoing  edges from a node. However, this doesn’t propagate the score throughout the nodes.
 
-To overcome this, we use the PageRank (PR) algorithm \ref{PageRank}. PR ranks all the node in a graph by forming a probability distribution i.e.\ the cumulative score of all PR scores sums up to one. 
+To overcome this, we use the PageRank (PR) algorithm \cite{PageRank}. PR ranks all the node in a graph by forming a probability distribution i.e.\ the cumulative score of all PR scores sums up to one. 
 
 PR will assign high score to a node if: (1) there are many nodes pointing to it and (2) those nodes also have high PR score.
 
@@ -69,7 +69,7 @@ then a similarity model $S:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$
 
 where $f$ 
 
-Similarity function $s$ is subject to the following properties: \ref{Santini}:
+Similarity function $s$ is subject to the following properties: \cite{Santini:1999:SM:317043.317048}:
 
 \begin{itemize}
 	\item Symmetry: $\forall x,y \in \mathds{X}: s(x,y) = s(y,x)$ - the order of the objects in the input should not affect the output score
@@ -110,17 +110,192 @@ d(x,y) = 1 - s(x,y)
 \label{disi}
 \end{equation}
 
+\subsection{Example distance and similarity functions  between attributes}
+\subsubsection{Euclidean distance}
 
-\subsection{Binary Similarity}
+Euclidean distance measures the direct distance between two points in Euclidean space. For two d-dimensional points $x$ and $y$, the Euclidean distance is defined as:
+\begin{equation}
+	d^{EUC}(x,y) = \sqrt{(x_{1} - y_{1})^{2} + (x_{2} - y_{2})^{2} + ... + (x_{d} - y_{d})^{2} } = \sqrt{\sum_{i=1}^{d} (x_{i}-y_{i})^{2}}
+\end{equation}
+
+Norm of the vector.
+
+\begin{equation}
+	\lVert x\lVert = \sqrt{\sum_{i=1}^{d}x_{i}^{2}}
+	\title{eq:norm}
+\end{equation}
+
+The Euclidean distance is a metric distance\cite{Deza.Deza2009EncyclopediaofDistances}.
+
+\subsubsection{Cosine similarity}
+The cosine similarity is defined through the dot product between vectors. For two vectors $x$ and $y$, the dot product is expressed as:
+
+\begin{equation}
+	x\cdot y^{T} = \lVert x\lVert \lVert y\lVert \cos{\theta}
+	\label{eq:dot}
+\end{equation}
+
+
+where the $\lVert x\lVert$ and $\lVert y\lVert$ are the norms of the vectors x and y respectively), 
+and $\theta$ is the angle between the two vectors.
+The equation \ref{eq:dot} can be used to express the $\cos \theta$ value:
+
+\begin{equation}
+	\cos \theta = s^{COS} \dfrac{x \cdot y}{\lVert x\lVert \lVert y\lVert} = 
+	\dfrac{\sum_{i=1}^{d}x_{i}y_{i}}{\sqrt{\sum_{i=1}^{d} x_{i}^{2}}\sqrt{\sum_{i=1}^{d} y_{i}^{2}}}
+	\label{eq:cosine}
+\end{equation} 
+
+Equation \ref{eq:cosine} defines the cosine similarity function $s^{COS}$, which combines dot product (nominator) with normalization (denominator).
+
+The cosine similarity looks into the angle between the vectors. 
+For $\theta$ values close to zero, the cosine similarity will assign a value close to 1, which means that that the two vectors are very similar to each other. 
+Although the cosine value ranges between -1 and 1, if we restrict the features only to positive values as shown in TF-IDF 
+\todo{Refer to TF-IDF chapter}, the value of $\theta$ will range from 0 to 90 degrees. 
+Consequently, the cosine similarity will range between 0 and 1.
+
+This normalization allows us to define the Cosine distance as 
+$d^{COS}1 - \cos \theta$. 
+However, this is not a metric distance, as it does not fulfill the triangle inequality.
+
+\subsubsection{Binary Similarity}
 The binary similarity corresponds to exact matching. 
 
 \begin{equation}
-	\forall x,y \in \mathds{X}: s(x,y)=
-	\begin{cases}
-	1  & \quad \text{if } x=y \\
-	0  & \quad \text{else }\\
-	\end{cases}
-	\label{binary} 
+\forall x,y \in \mathds{X}: s^{BIN}(x,y)=
+\begin{cases}
+1  & \quad \text{if } x=y \\
+0  & \quad \text{else }\\
+\end{cases}
+\label{eq:binary} 
 \end{equation}
 
 Although very restrictive, the binary similarity can be easily applied to any domain. 
+
+\subsubsection{Hamming Distance}
+The Hamming distance between two strings counts the number of positions where different elements occur. 
+
+\begin{equation}
+	d^{HAM}(x,y) = 
+\end{equation}
+As a constraint, the arrays have to be off the same length. 
+This constraint can be easily overcome by counting the empty places in the shorter array. 
+
+Hamming distance relies on very strict matching. This results in failure to recognize sub-array alignment (longest common parts). 
+For example, given the strings \emph{"Evaluation"} and \emph{"Realization"}, 
+the Hamming Distance is 9, 
+since only the substring \emph{"al"} occurs at the same position at the two inputs.
+\todo {Hamming distance example}
+
+\subsubsection{Edit Distance}
+The Edit Distance  is a measure for quantifying the dissimilarity between two vectors\cite{Jurafsky:2009:SLP:1214993}.
+It is also known as \emph{Levenshtein Distance}, which was specifically defined for string comparison 
+(also referred as \emph{String Edit Distance})\cite{Navarro:2001:GTA:375360.375365}.
+
+The (String) Edit distance equals the number of operations required to transform array $x$ into array $y$. 
+This operations are limited to:
+\begin{itemize}
+	\item[--] Insertion of single character
+	\item[--] Substitution of single character
+	\item[--] Deletion of single character
+\end{itemize}
+
+The formal expression of is given with equation \ref{eq:edit-distance}.
+\begin{equation}
+	d^{EDIT}(x,y) = 
+	\label{eq:edit-distance}
+\end{equation}
+
+Edit Distance overcomes the drawbacks of the Hamming Distance. 
+It is robust in terms of substrings alignment. 
+This can be shown on the previous example, where the given strings are \emph{"Evaluation"} and \emph{"Realization"}.
+First, the ED will identify the common substrings, which in this case are underlined in \todo{Reference Figure}. 
+These symbols remain unmodified. 
+The remaining operations needed to convert string Q to  S are:
+\begin{itemize}
+	\item[--] One substitution of character 'E' to 'R'
+	\item[--] One substitution of character 'V' to 'E'
+	\item[--] One substitution of character 'U' to 'I'
+	\item[--] One insertion of character 'Z'
+\end{itemize}
+
+This results in total of 4 operation, giving the distance (or cost) of 4.
+
+Assigning cost to each operation results into Weighted Edit Distance\cite{Chen:2004:MLE:1316689.1316758}.
+\begin{equation}
+	d^{WEDIT}(x,y) = 
+\end{equation}
+
+Both Edit Distance and the Weighted Edit Distance are metric.
+
+\subsection{Example distance and similarity functions using graph structure}
+
+\subsubsection{Neighborhood Random Walk Distance}
+
+Based on the connectivity in a graph $G$, a distance measure between vertices can be defined. 
+Two nodes $v_{a}$ and $v_{b}$ are considered close if there are multiple paths connecting them. 
+If there are few or no paths, then the are considered dissimilar.
+
+\begin{definition}
+	Given $l$ as the upper bound how far a random walker can go and the restart probability $c \in [0, 1]$, 
+the Random Walk Distance between two nodes  $v_{i}$ and $v_{j}$ in graph $G$ is defined as:
+\begin{equation}
+	d^{NRW}(v_{a}, v_{b}) = \sum_{\tau:v_{i}\rightsquigarrow v_{j}}p(\tau)c(1-c)^{len(\tau)}
+\end{equation}
+defined for all paths $\tau$ between $v_{a}$ and $v_{b}$ whose length is shorter than $l$ with transition probability p($\tau$). 
+\end{definition}
+
+For unweighted graph, the probability distribution of edges considered in the final path is uniform.
+
+\subsubsection{SimRank}
+SimRank calculates similarities between vertices in graph $G$ based on their structural context\cite{Jeh02simrank:a}.
+The underlying idea of this algorithm is that two objects are similar if they are referenced by similar other objects. 
+The objects are modeled as vertices (nodes) and the relations between them as directed edges.
+This makes SimRank domain independent, applicable for every domain that can be modeled using the basic directed graph model.
+
+
+SimRank is defined as:
+\begin{equation}
+	s^{SR}(v_{a},v_{b}) = \dfrac{C}{\arrowvert I(v_{a})\arrowvert \arrowvert I(v_{b})\arrowvert}
+	\sum_{i=1}^{\arrowvert I(v_{a})\arrowvert}\sum_{j=1}^{\arrowvert I(v_{b})}s^{SR}(I_{i}(v_{a}), I_{j}(v_{b}))
+	\label{eq:simrank}
+\end{equation}
+where $C \in [0,1]$ is a the factor of decay, $I(v)$ is the set of predecessor nodes for a given node $v$, 
+and $\arrowvert I(v)\arrowvert$ is the size of that set.
+Dividing by the total number of predecessors pairs allows us to obtain normalized value: 
+a range between 0 (maximum dissimilarity)  to 1 (same pair of nodes). 
+
+For veticies that have no predecessors ($I(v)=\emptyset$), the similarity is set to zero.
+Alternatively, equation \ref{eq:simrank} can be expressed using the set of successors $O(v))$ of the node $v$,
+or combining the result from both approaches.
+
+As stated, the intuition behind this approach is recursive - 
+in order to define similarity between two objects, we need to rely on already pre-calculated similarity between the neighbors.
+SimRank is computing by iteratively evaluating over each pair of nodes $(v_{a},v_{b})$ until fixpoint is reached. 
+The initial similarity score is  calculated using the binary similarity (equation \ref{eq:binary}):
+
+\begin{equation}
+	s_{0}^{SR}(v_{a},v_{b}) = \begin{cases}
+	1  & \quad \text{if } v_{a}=v_{b} \\
+	0  & \quad \text{else }\\
+	\end{cases}
+\end{equation}
+The node pairs, where the $s_{0}^{SR}(v_{a},v_{b})=1$ are called singleton pairs.
+For each iteration $k$, the similarity score $s_{k+1}^{SR}$ is updated using $s_{k+1}^{SR}$:
+
+\begin{equation}
+	s_{k+1}^{SR}(v_{a},v_{b})= \dfrac{C}{\arrowvert I(v_{a})\arrowvert \arrowvert I(v_{b})\arrowvert}
+	\sum_{i=1}^{\arrowvert I(v_{a})\arrowvert}\sum_{j=1}^{\arrowvert I(v_{b})}s_{k}^{SR}(I_{i}(v_{a}), I_{j}(v_{b}))
+\end{equation}
+where $v_{a}\neq v_{b}$ (we only update the score for non-singleton pairs).
+
+The end result after $K$ iterations is a graph $G^{2} = (V^{2},E^{2})$, where the nodes are pairs from $G$
+and the edges are aggregated for both elements of the vertex pair:
+\begin{itemize}
+	\item[--] $V^{2} = V\times V$ are vertex pairs in $V$
+	\item[--] $E^{2}:(a,b) \rightarrow (c,d)$ in $G^{2}$ iff $a\rightarrow c$ and $b\rightarrow d$ in $G$
+\end{itemize}
+
+\todo{Figure}{Figure for SimRank and end result}
+
+\section{Association Rule Mining}

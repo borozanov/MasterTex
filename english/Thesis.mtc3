@@ -9,4 +9,13 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Similarity}{\reset@font\mtcSfont 10}{section.3.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Introduction}{\reset@font\mtcSSfont 10}{subsection.3.3.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Conversion form distance to similarity}{\reset@font\mtcSSSfont 11}{section*.15}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Binary Similarity}{\reset@font\mtcSSfont 12}{subsection.3.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Example distance and similarity functions between attributes}{\reset@font\mtcSSfont 12}{subsection.3.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Euclidean distance}{\reset@font\mtcSSSfont 12}{section*.16}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Cosine similarity}{\reset@font\mtcSSSfont 12}{section*.17}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Binary Similarity}{\reset@font\mtcSSSfont 13}{section*.18}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Hamming Distance}{\reset@font\mtcSSSfont 13}{section*.19}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Edit Distance}{\reset@font\mtcSSSfont 13}{section*.20}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Example distance and similarity functions using graph structure}{\reset@font\mtcSSfont 14}{subsection.3.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Neighborhood Random Walk Distance}{\reset@font\mtcSSSfont 14}{section*.21}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline SimRank}{\reset@font\mtcSSSfont 14}{section*.22}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Association Rule Mining}{\reset@font\mtcSfont 15}{section.3.4}}
