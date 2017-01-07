@@ -16,22 +16,25 @@
 \contentsline {subsubsection}{\nonumberline Node Coverage}{10}{section*.14}
 \contentsline {section}{\numberline {3.3}Similarity}{10}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Introduction}{10}{subsection.3.3.1}
-\contentsline {subsubsection}{\nonumberline Conversion form distance to similarity}{11}{section*.15}
-\contentsline {subsection}{\numberline {3.3.2}Example distance and similarity functions between attributes}{12}{subsection.3.3.2}
+\contentsline {subsubsection}{\nonumberline Conversion from Distance to Similarity}{11}{section*.15}
+\contentsline {subsection}{\numberline {3.3.2}Example Distance and Similarity Functions Between Features}{12}{subsection.3.3.2}
 \contentsline {subsubsection}{\nonumberline Euclidean distance}{12}{section*.16}
-\contentsline {subsubsection}{\nonumberline Cosine similarity}{12}{section*.17}
+\contentsline {subsubsection}{\nonumberline Cosine Similarity}{12}{section*.17}
 \contentsline {subsubsection}{\nonumberline Binary Similarity}{13}{section*.18}
 \contentsline {subsubsection}{\nonumberline Hamming Distance}{13}{section*.19}
 \contentsline {subsubsection}{\nonumberline Edit Distance}{13}{section*.20}
-\contentsline {subsection}{\numberline {3.3.3}Example distance and similarity functions using graph structure}{14}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Example Distance and Similarity Functions Using Graph Structure}{14}{subsection.3.3.3}
 \contentsline {subsubsection}{\nonumberline Neighborhood Random Walk Distance}{14}{section*.21}
 \contentsline {subsubsection}{\nonumberline SimRank}{14}{section*.22}
-\contentsline {section}{\numberline {3.4}Association rule mining}{15}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Background}{16}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.4}Association Rule Mining}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Definition}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Association Rule Interestingness}{16}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Association Rule Mining}{16}{subsection.3.4.3}
+\contentsline {subsubsection}{\nonumberline Generating Frequent Itemsets}{16}{section*.23}
 \contentsline {chapter}{\numberline {4}Realization}{17}{chapter.4}
 \contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}
 \contentsline {section}{\numberline {6.1}Future Work}{21}{section.6.1}
 \contentsline {chapter}{\numberline {A}\LaTeX \ Symbols}{23}{appendix.A}
 \contentsline {chapter}{\numberline {B}Some Other Appendix}{29}{appendix.B}
-\contentsline {chapter}{\nonumberline Bibliography}{31}{chapter*.27}
+\contentsline {chapter}{\nonumberline Bibliography}{31}{chapter*.28}

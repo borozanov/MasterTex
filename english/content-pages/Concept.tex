@@ -72,8 +72,8 @@ where $f$
 Similarity function $s$ is subject to the following properties: \cite{Santini:1999:SM:317043.317048}:
 
 \begin{itemize}
-	\item Symmetry: $\forall x,y \in \mathds{X}: s(x,y) = s(y,x)$ - the order of the objects in the input should not affect the output score
-	\item Maximum self-similarity: $\forall x,y \in \mathds{X}: s(x,x) \geqslant s(x,y)$ - nothing can be more similar than the object itself
+	\item[--] Symmetry: $\forall x,y \in \mathds{X}: s(x,y) = s(y,x)$ - the order of the objects in the input should not affect the output score
+	\item[--] Maximum self-similarity: $\forall x,y \in \mathds{X}: s(x,x) \geqslant s(x,y)$ - nothing can be more similar than the object itself
 \end{itemize}
 
 For applying similarity function, an object representation is needed with a corresponding distance function. 
@@ -86,18 +86,18 @@ In other words, similar objects tend to have short distances between one another
 
 For function $d:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$ to qualify as distance, in needs to fulfill the following constraints \ref{Deza.Deza2009EncyclopediaofDistances}:
 \begin{itemize}
-	\item Non-negativity: $\forall x,y \in \mathds{X}: d(x,y) \leqslant 0$
-	\item Reflexivity: $\forall x \in \mathds{X}: d(x,x) = 0$
-	\item Symmetry: $\forall x,y \in \mathds{X}: d(x,y) = d(y,x)$
+	\item[--] Non-negativity: $\forall x,y \in \mathds{X}: d(x,y) \leqslant 0$
+	\item[--] Reflexivity: $\forall x \in \mathds{X}: d(x,x) = 0$
+	\item[--] Symmetry: $\forall x,y \in \mathds{X}: d(x,y) = d(y,x)$
 \end{itemize}
 
 Further more, a distance $d$ is a metric, if it additionally satisfies the following properties:
 \begin{itemize}
-	\item Identity of indiscernibles: $\forall x,y \in \mathds{X}: d(x,y) = 0 \Leftrightarrow x=y$
-	\item Triangle inequality: $\forall x,y,z \in \mathds{X}: d(x,y) \leqslant d(x,z) + d(y,z)$
+	\item[--] Identity of indiscernibles: $\forall x,y \in \mathds{X}: d(x,y) = 0 \Leftrightarrow x=y$
+	\item[--] Triangle inequality: $\forall x,y,z \in \mathds{X}: d(x,y) \leqslant d(x,z) + d(y,z)$
 \end{itemize}
 
-\subsubsection{Conversion form distance to similarity}
+\subsubsection{Conversion from Distance to Similarity}
 
 The conversion from distance to similarity may differ. 
 Any monotonically decreasing transformation can be applied to convert similarity measures into dissimilarity measures, 
@@ -110,7 +110,7 @@ d(x,y) = 1 - s(x,y)
 \label{disi}
 \end{equation}
 
-\subsection{Example distance and similarity functions  between attributes}
+\subsection{Example Distance and Similarity Functions Between Features}
 \subsubsection{Euclidean distance}
 
 Euclidean distance measures the direct distance between two points in Euclidean space. For two d-dimensional points $x$ and $y$, the Euclidean distance is defined as:
@@ -127,7 +127,7 @@ Norm of the vector.
 
 The Euclidean distance is a metric distance\cite{Deza.Deza2009EncyclopediaofDistances}.
 
-\subsubsection{Cosine similarity}
+\subsubsection{Cosine Similarity}
 The cosine similarity is defined through the dot product between vectors. For two vectors $x$ and $y$, the dot product is expressed as:
 
 \begin{equation}
@@ -228,7 +228,7 @@ Assigning cost to each operation results into Weighted Edit Distance\cite{Chen:2
 
 Both Edit Distance and the Weighted Edit Distance are metric.
 
-\subsection{Example distance and similarity functions using graph structure}
+\subsection{Example Distance and Similarity Functions Using Graph Structure}
 
 \subsubsection{Neighborhood Random Walk Distance}
 
@@ -298,10 +298,10 @@ and the edges are aggregated for both elements of the vertex pair:
 
 \todo{Figure}{Figure for SimRank and end result}
 
-\section{Association rule mining}
+\section{Association Rule Mining}
 Association rule mining searches for recurring relationships in dataset.
-More specific, it discovers the associations and correlations among items.
-\subsection{Background}
+More specific, it discovers the associations and correlations among items\cite{Han:2005:DMC:1076797}.
+\subsection{Definition}
 Let $I=\{I1,I2,..,Im\}$ be n set of one or more items (also referred as itemset).
 An itemset of length k is labeled as k-itemset.
 
@@ -310,4 +310,42 @@ Transaction $T$ is said to contain an itemset $A$  if $A\subseteq T$.
 The goal of association rule mining is given the set of transactions $T$, 
 find association rules that will predict the occurrence of an item $I$ based on the occurrences of other items in the transaction $T$.
 
-An association rule indicated as $A\Rightarrow B$, where $A$ and $B$ are non-empty itemsets.
+An association rule indicated as 
+$\{A_{1},A_{2},...,A_{m}\}\Rightarrow \{B_{1},B_{2},...,B_{n}\}$, 
+where $\forall i,j \mid i\leq m,j\leq n$, $A_{i}$ and $B_{j}$ are non-empty itemsets. This indicates that if the transaction $T$ contains items $A_{1},..A_{m}$, it is highly likely that the items $B_{1},...,B_{m}$ would be of interest of $T$.
+\subsection{Association Rule Interestingness }
+For evaluating the interesting of rules, the \emph{support} and \emph{confidence} metrics are used.
+Support $supp$ for the rule $A\Rightarrow B$ indicates the fraction of transactions that contain both $A$ and $B$:
+\begin{equation}
+	supp(A\Rightarrow B) = P(A\cup B)
+\end{equation}
+Support will filter out rules that occurred by chance.
+%A rule with support above a given \emph{minimum support} threshold ($minsup$) is %called \emph{frequent itemset}.
+Confidence $conf$ for the rule $A\Rightarrow B$ indicates the fraction of items contained in $B$ that are also contained in $A$.
+\begin{equation}
+	conf(A \Rightarrow B) = P(B|A)
+\end{equation}
+Confidence measures the reliability made by a rule.
+
+Rule with support $\geq minsup$ and $conf\geq minconf$,
+where $minsup$ and $minconf$ are user defined thresholds,
+are called \emph{strong rules}.
+	
+\subsection{Association Rule Mining}
+
+Association rule mining is performed in two steps:
+\begin{itemize}
+	\item[1.] Frequent itemset generation i.e.\ itemsets with support $\geq minsup$
+	\item[2.] Strong rules generation from the frequent itemsets 
+\end{itemize}
+
+\subsubsection{Generating Frequent Itemsets}
+
+Using na\"{\i}ve approach, we count the frequency of all possible subsets in the database. 
+That means match each transaction against every candidate. 
+If $m$ is the total number of given items, the number of candidates for frequent itemset will be $2^{m}$\cite{Han:2005:DMC:1076797}.
+
+The Apriori algorithm\cite{Agrawal:1994:FAM:645920.672836} uses the 
+
+
+

@@ -1,4 +1,11 @@
-\begin{thebibliography}{Nav01}
+\begin{thebibliography}{Han05}
+
+\bibitem[AS94]{Agrawal:1994:FAM:645920.672836}
+Rakesh Agrawal and Ramakrishnan Srikant.
+\newblock Fast algorithms for mining association rules in large databases.
+\newblock In {\em Proceedings of the 20th International Conference on Very
+  Large Data Bases}, VLDB '94, pages 487--499, San Francisco, CA, USA, 1994.
+  Morgan Kaufmann Publishers Inc.
 
 \bibitem[CN04]{Chen:2004:MLE:1316689.1316758}
 Lei Chen and Raymond Ng.
@@ -16,6 +23,11 @@ Pierre-Antoine Champin and Christine Solnon.
 Michel~Marie Deza and Elena Deza.
 \newblock {\em Encyclopedia of Distances}.
 \newblock Springer Berlin Heidelberg, 2009.
+
+\bibitem[Han05]{Han:2005:DMC:1076797}
+Jiawei Han.
+\newblock {\em Data Mining: Concepts and Techniques}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2005.
 
 \bibitem[JM09]{Jurafsky:2009:SLP:1214993}
 Daniel Jurafsky and James~H. Martin.
