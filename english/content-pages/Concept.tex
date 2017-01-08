@@ -6,7 +6,7 @@
 \section{Background}
 \todo{Intro in the concept}
 
-\section{Graph Theory}
+\section{Graph Theory Fundamentals}
 \subsection{Labeled Graphs}
 Graph $G = (V,E)$ is a finite non-empty set of vertices $V = {v_{1}, v_{2}, …}$ with a set of edges $E = {e_{1}, e_{2}, …}$ that connect pairs of vertices.
 If the edges have direction, then the $G$ is a directed graph (digraph). 
@@ -45,9 +45,44 @@ PR will assign high score to a node if: (1) there are many nodes pointing to it 
 \todo{Explain PR algorithm}
 
 \subsection{Graph Comparison}
-\subsubsection{Isomorphism}
-\subsubsection{Maximum Common Subgraph}
-\subsubsection{Node Coverage}
+
+Two labeled graphs $G_{1}$ and $G_{2}$ are considered equal if they have the same set of nodes and they are connected in the same way. 
+This is also known as \emph{isomorphism}\cite{Wilson:1986:IGT:22577}. 
+%Sub-isomorphism checks whether one graph completely contains the other.%
+Isomorphic graphs are identical in structure and labeling. 
+This results in a very restrictive measure. 
+In a given scenario where most but not all edges and vertices are identical,
+the graphs will not be considered equal.
+
+Instead, the \emph{Maximum Common Subgraph} can be considered.
+This is the largest subgraph $G$ for the input $(G_{1},G_{2})$ 
+such that that there exist subgraph isomorphisms from $G$ to $G_{1}$ and from $G$ to $G_{2}$.
+In figure \ref{fig:mcs3} the Maximum Common subgraph is shown for the graphs in figure \ref{fig:mcs1} and \ref{fig:mcs2}.
+
+\begin{figure}[t]
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{mcs1.pdf}
+		\caption{$G_{1}$}
+		\label{fig:mcs1}
+	\end{subfigure}%
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{mcs2.pdf}
+		\caption{$G_{2}$}
+		\label{fig:mcs2}
+	\end{subfigure}
+\begin{subfigure}{.3\textwidth}
+	\centering
+	\includegraphics[width=.43\linewidth]{mcs3.pdf}
+	\caption{$mcs(G_{1},G_{2})$}
+	\label{fig:mcs3}
+\end{subfigure}
+	\caption{Example of Directed Maximum Common Subgraph for input $(G_{1},G_{2})$ }
+	\label{fig:mcs}
+\end{figure}
+ 
+ However, it is shown that this evaluation is NP-complete \todo{refer}{\url{https://cise.ufl.edu/class/cot5405sp10/assignments/HW4sol.pdf}}.
 
 \section{Similarity}
 \subsection{Introduction}
@@ -84,7 +119,7 @@ The distance function allows us to give score for the closeness between the corr
 It directly corresponds to the dissimilarity measure: it gets value close to zero for objects which are similar (i.e. close) to each other. 
 In other words, similar objects tend to have short distances between one another.
 
-For function $d:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$ to qualify as distance, in needs to fulfill the following constraints \ref{Deza.Deza2009EncyclopediaofDistances}:
+For function $d:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$ to qualify as distance, in needs to fulfill the following constraints\cite{Deza.Deza2009EncyclopediaofDistances}:
 \begin{itemize}
 	\item[--] Non-negativity: $\forall x,y \in \mathds{X}: d(x,y) \leqslant 0$
 	\item[--] Reflexivity: $\forall x \in \mathds{X}: d(x,x) = 0$
@@ -102,15 +137,16 @@ Further more, a distance $d$ is a metric, if it additionally satisfies the follo
 The conversion from distance to similarity may differ. 
 Any monotonically decreasing transformation can be applied to convert similarity measures into dissimilarity measures, 
 and any monotonically increasing transformation can be applied to convert the similarity to distance.
-\todo{Cite lecture notes}\url{http://users.csc.calpoly.edu/~dekhtyar/560-Fall2009/lectures/lec09.466.pdf}
+\todo{Cite lecture notes}{\url{http://users.csc.calpoly.edu/~dekhtyar/560-Fall2009/lectures/lec09.466.pdf}}
 
 If the similarity values are normalized in the range from 0 to 1 (degree of similarity), then the corresponding dissimilarity can be expressed as : 
 \begin{equation}
 d(x,y) = 1 - s(x,y)
-\label{disi}
+\label{dissim}
 \end{equation}
 
 \subsection{Example Distance and Similarity Functions Between Features}
+Given two objects from the same set $\forall x,y \in \mathds{X}$ we will list several distance and similarity measures (distance functions are labeled with $d$, where similarity functions with $s$).
 \subsubsection{Euclidean distance}
 
 Euclidean distance measures the direct distance between two points in Euclidean space. For two d-dimensional points $x$ and $y$, the Euclidean distance is defined as:
@@ -118,7 +154,7 @@ Euclidean distance measures the direct distance between two points in Euclidean 
 	d^{EUC}(x,y) = \sqrt{(x_{1} - y_{1})^{2} + (x_{2} - y_{2})^{2} + ... + (x_{d} - y_{d})^{2} } = \sqrt{\sum_{i=1}^{d} (x_{i}-y_{i})^{2}}
 \end{equation}
 
-Norm of the vector.
+ \todo{explain} {Norm of the vector}:
 
 \begin{equation}
 	\lVert x\lVert = \sqrt{\sum_{i=1}^{d}x_{i}^{2}}
@@ -138,10 +174,10 @@ The cosine similarity is defined through the dot product between vectors. For tw
 
 where the $\lVert x\lVert$ and $\lVert y\lVert$ are the norms of the vectors x and y respectively), 
 and $\theta$ is the angle between the two vectors.
-The equation \ref{eq:dot} can be used to express the $\cos \theta$ value:
+The equation \ref{eq:dot} can be used to express the $\cos \theta$ value as similarity measure:
 
 \begin{equation}
-	\cos \theta = s^{COS} \dfrac{x \cdot y}{\lVert x\lVert \lVert y\lVert} = 
+	\cos \theta = s^{COS}(x,y) = \dfrac{x \cdot y}{\lVert x\lVert \lVert y\lVert} = 
 	\dfrac{\sum_{i=1}^{d}x_{i}y_{i}}{\sqrt{\sum_{i=1}^{d} x_{i}^{2}}\sqrt{\sum_{i=1}^{d} y_{i}^{2}}}
 	\label{eq:cosine}
 \end{equation} 
@@ -155,14 +191,14 @@ Although the cosine value ranges between -1 and 1, if we restrict the features o
 Consequently, the cosine similarity will range between 0 and 1.
 
 This normalization allows us to define the Cosine distance as 
-$d^{COS}1 - \cos \theta$. 
+$d^{COS}=1 - \cos \theta$. 
 However, this is not a metric distance, as it does not fulfill the triangle inequality.
 
 \subsubsection{Binary Similarity}
 The binary similarity corresponds to exact matching. 
 
 \begin{equation}
-\forall x,y \in \mathds{X}: s^{BIN}(x,y)=
+s^{BIN}(x,y)=
 \begin{cases}
 1  & \quad \text{if } x=y \\
 0  & \quad \text{else }\\
@@ -171,21 +207,32 @@ The binary similarity corresponds to exact matching.
 \end{equation}
 
 Although very restrictive, the binary similarity can be easily applied to any domain. 
-
+ 
 \subsubsection{Hamming Distance}
-The Hamming distance between two strings counts the number of positions where different elements occur. 
+The Hamming distance between two strings counts the number of positions where different elements occur:
 
 \begin{equation}
-	d^{HAM}(x,y) = 
+	d^{HAM}(x,y) = \sum_{i=1}^{n}d^{BIN}(x_{i},y_{i}) $$where$$ 
+	d^{BIN}(x_{i},y_{i})=
+	\begin{cases}
+	0  & \quad \text{if } x=y \\
+	1  & \quad \text{else }\\
+	\end{cases}
 \end{equation}
 As a constraint, the arrays have to be off the same length. 
-This constraint can be easily overcome by counting the empty places in the shorter array. 
+This can be easily overcome by counting the empty places in the shorter array. 
 
 Hamming distance relies on very strict matching. This results in failure to recognize sub-array alignment (longest common parts). 
-For example, given the strings \emph{"Evaluation"} and \emph{"Realization"}, 
+In example at \figref{fig:hamming}, given the strings \emph{"EVALUATION"} and \emph{"REALIZATION"}, 
 the Hamming Distance is 9, 
-since only the substring \emph{"al"} occurs at the same position at the two inputs.
-\todo {Hamming distance example}
+since only the substring \emph{"AL"} occurs at the same position at the two inputs.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{hamming.png}
+	\caption{Hamming Distance Example} 
+	\label{fig:hamming}
+\end{figure}
 
 \subsubsection{Edit Distance}
 The Edit Distance  is a measure for quantifying the dissimilarity between two vectors\cite{Jurafsky:2009:SLP:1214993}.
@@ -202,29 +249,41 @@ This operations are limited to:
 
 The formal expression of is given with equation \ref{eq:edit-distance}.
 \begin{equation}
-	d^{EDIT}(x,y) = 
+	d^{EDIT}(x,y) = 	
+	\begin{cases}
+	size(x)	  & \quad \text{if } size(y)=0 \\
+	size(y)	  & \quad \text{if } size(x)=0 \\
+	d^{EDIT}(start(x),start(y))	  & \quad \text{if } last(x)=last(y) \\
+	1 + min\begin{cases}
+		d^{EDIT}(start(x),start(y)),
+		d^{EDIT}(start(x),y), \\
+		d^{EDIT}(x,start(y)) \\
+		\end{cases} & \quad \text{else }\\
+	\end{cases} 
 	\label{eq:edit-distance}
 \end{equation}
 
 Edit Distance overcomes the drawbacks of the Hamming Distance. 
 It is robust in terms of substrings alignment. 
-This can be shown on the previous example, where the given strings are \emph{"Evaluation"} and \emph{"Realization"}.
-First, the ED will identify the common substrings, which in this case are underlined in \todo{Reference Figure}. 
-These symbols remain unmodified. 
-The remaining operations needed to convert string Q to  S are:
+This can be shown on the given strings are \emph{"EVALUATION"} and \emph{"REALIZATION"} in \figref{fig:edit}.
+These common substrings remain unmodified. 
+The remaining operations needed to convert string X to Y are:
 \begin{itemize}
-	\item[--] One substitution of character 'E' to 'R'
-	\item[--] One substitution of character 'V' to 'E'
-	\item[--] One substitution of character 'U' to 'I'
-	\item[--] One insertion of character 'Z'
+	\item[--] One insertion of character 'R'
+	\item[--] One deletion of character 'V'
+	\item[--] One insertion of character 'I'
+	\item[--] One substitution of character 'U' to 'Z'
 \end{itemize}
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{edit.png}
+	\caption{Edit Distance Example} 
+	\label{fig:edit}
+\end{figure}
 This results in total of 4 operation, giving the distance (or cost) of 4.
 
 Assigning cost to each operation results into Weighted Edit Distance\cite{Chen:2004:MLE:1316689.1316758}.
-\begin{equation}
-	d^{WEDIT}(x,y) = 
-\end{equation}
 
 Both Edit Distance and the Weighted Edit Distance are metric.
 
@@ -238,9 +297,9 @@ If there are few or no paths, then the are considered dissimilar.
 
 \begin{definition}
 	Given $l$ as the upper bound how far a random walker can go and the restart probability $c \in [0, 1]$, 
-the Random Walk Distance between two nodes  $v_{i}$ and $v_{j}$ in graph $G$ is defined as:
+the Random Walk Distance between two nodes  $x$ and $y$ in graph $G$ is defined as:
 \begin{equation}
-	d^{NRW}(v_{a}, v_{b}) = \sum_{\tau:v_{i}\rightsquigarrow v_{j}}p(\tau)c(1-c)^{len(\tau)}
+	d^{NRW}(x,y) = \sum_{\tau:v_{i}\rightsquigarrow v_{j}}p(\tau)c(1-c)^{len(\tau)}
 \end{equation}
 defined for all paths $\tau$ between $v_{a}$ and $v_{b}$ whose length is shorter than $l$ with transition probability p($\tau$). 
 \end{definition}
@@ -256,14 +315,15 @@ This makes SimRank domain independent, applicable for every domain that can be m
 
 SimRank is defined as:
 \begin{equation}
-	s^{SR}(v_{a},v_{b}) = \dfrac{C}{\arrowvert I(v_{a})\arrowvert \arrowvert I(v_{b})\arrowvert}
-	\sum_{i=1}^{\arrowvert I(v_{a})\arrowvert}\sum_{j=1}^{\arrowvert I(v_{b})}s^{SR}(I_{i}(v_{a}), I_{j}(v_{b}))
+	s^{SR}(x,y) = \dfrac{C}{\arrowvert I(x)\arrowvert \arrowvert I(y)\arrowvert}
+	\sum_{i=1}^{\arrowvert I(x)\arrowvert}
+	\sum_{j=1}^{\arrowvert I(y)\arrowvert}s^{SR}(I_{i}(x), I_{j}(y))
 	\label{eq:simrank}
 \end{equation}
 where $C \in [0,1]$ is a the factor of decay, $I(v)$ is the set of predecessor nodes for a given node $v$, 
 and $\arrowvert I(v)\arrowvert$ is the size of that set.
 Dividing by the total number of predecessors pairs allows us to obtain normalized value: 
-a range between 0 (maximum dissimilarity)  to 1 (same pair of nodes). 
+a range between 0 (maximum dissimilarity) to 1 (same pair of nodes). 
 
 For veticies that have no predecessors ($I(v)=\emptyset$), the similarity is set to zero.
 Alternatively, equation \ref{eq:simrank} can be expressed using the set of successors $O(v))$ of the node $v$,
@@ -345,7 +405,15 @@ Using na\"{\i}ve approach, we count the frequency of all possible subsets in the
 That means match each transaction against every candidate. 
 If $m$ is the total number of given items, the number of candidates for frequent itemset will be $2^{m}$\cite{Han:2005:DMC:1076797}.
 
-The Apriori algorithm\cite{Agrawal:1994:FAM:645920.672836} uses the 
+The Apriori algorithm\cite{Agrawal:1994:FAM:645920.672836} uses the principle of anti monotonicity to prune the generation of candidates: 
+if an itemset is frequent, then all of its subsets must also be frequent.
+If an item $I$ does not satisfy the $minsup$ threshold (not frequent item),
+then it is not of our interest - since adding new item $A$ to this itemset cannot occur more frequently than $minsip$. 
+This means that $P(I \cup A)$ < $minsup$, so we don’t need to consider additional items for $I$. 
+The algorithm first counts the 1-itemsets, then the 2-itemsets and iteratively increases the k-itemset size until no more candidates are generated.
+Each iteration consists of two steps: join and prune. 
+In the join step, the list of candidates $C_{k+1}$ is generated by joining the previous list of candidates Ck with itself. 
+In the prune step, all the k-itemsets that are infrequent are removed.
 
 
 
