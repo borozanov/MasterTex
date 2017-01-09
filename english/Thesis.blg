@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Thesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Thesis.aux
 The style file: alpha.bst
 Database file #1: resources/Bibliography.bib
 Warning--I didn't find a database entry for "Eclipse"
@@ -14,45 +12,4 @@ Warning--to sort, need author or key in R-project
 Warning--can't use both author and editor fields in Champin2003
 Warning--can't use both volume and number fields in Gamma1995
 Warning--empty publisher in Gamma1995
-You've used 20 entries,
-            2543 wiz_defined-function locations,
-            695 strings with 7893 characters,
-and the built_in function-call counts, 7350 in all, are:
-= -- 725
-> -- 303
-< -- 9
-+ -- 105
-- -- 100
-* -- 480
-:= -- 1125
-add.period$ -- 59
-call.type$ -- 20
-change.case$ -- 108
-chr.to.int$ -- 19
-cite$ -- 33
-duplicate$ -- 329
-empty$ -- 605
-format.name$ -- 117
-if$ -- 1569
-int.to.chr$ -- 2
-int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 100
-num.names$ -- 45
-pop$ -- 172
-preamble$ -- 1
-purify$ -- 135
-quote$ -- 0
-skip$ -- 273
-stack$ -- 0
-substring$ -- 345
-swap$ -- 69
-text.length$ -- 9
-text.prefix$ -- 3
-top$ -- 0
-type$ -- 124
-warning$ -- 8
-while$ -- 61
-width$ -- 22
-write$ -- 251
 (There were 11 warnings)
