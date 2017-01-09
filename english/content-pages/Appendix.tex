@@ -1,18 +1,1 @@
-\chapter{\LaTeX\ Symbols} \label{chap:LaTeX Symbols}
-
-\def\MyAppendedPDF{latex_symbols.pdf} % define your pdf (in resources/images/)
-\newcounter{pages_of_my_pdf}
-\setcounter{pages_of_my_pdf}{4} % do not forget to adapt your number of pages
-\newcounter{current_page_of_my_pdf}
-\forloop{current_page_of_my_pdf}{1}{\not{\value{current_page_of_my_pdf} > \value{pages_of_my_pdf}}}
-{
-  \begin{figure}[htpb]
-    \centering
-      \fbox{\includegraphics[page=\arabic{current_page_of_my_pdf}, height=.9\textheight]{\MyAppendedPDF}} % and here goes your pdf
-    \caption{\LaTeX\ Symbols page \arabic{current_page_of_my_pdf} of \arabic{pages_of_my_pdf}}
-    \label{fig:LaTeX Symbols page \arabic{current_page_of_my_pdf}}
-  \end{figure}
-}
-
-\chapter{Some Other Appendix} \label{chap:Some Other Appendix}
-\blindtext
+\chapter{Appendix} \label{chap:appendix}

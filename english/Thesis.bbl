@@ -1,4 +1,5 @@
-\begin{thebibliography}{GHJV95}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{OMBD14}
 
 \bibitem[AS94]{Agrawal:1994:FAM:645920.672836}
 Rakesh Agrawal and Ramakrishnan Srikant.
@@ -29,16 +30,35 @@ Michel~Marie Deza and Elena Deza.
 \newblock {\em Encyclopedia of Distances}.
 \newblock Springer Berlin Heidelberg, 2009.
 
+\bibitem[Gepa]{Gephi}
+Gephi - the open graph viz platform.
+\newblock \url{https://gephi.org/}.
+\newblock Accessed: 2017-01-10.
+
+\bibitem[Gepb]{Gephi:GraphAPI}
+Graph api.
+\newblock Accessed: 2017-01-10.
+
 \bibitem[GHJV95]{Gamma1995}
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 \newblock {\em {Design Patterns}}, volume~47 of {\em Addison Wesley
   Professional Computing Series}.
 \newblock 1995.
 
+\bibitem[GJS{\etalchar{+}}14]{Gosling:2014:JLS:2636997}
+James Gosling, Bill Joy, Guy~L. Steele, Gilad Bracha, and Alex Buckley.
+\newblock {\em The Java Language Specification, Java SE 8 Edition}.
+\newblock Addison-Wesley Professional, 1st edition, 2014.
+
 \bibitem[Han05]{Han:2005:DMC:1076797}
 Jiawei Han.
 \newblock {\em Data Mining: Concepts and Techniques}.
 \newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2005.
+
+\bibitem[JGr]{JGraphT}
+Jgrapht.
+\newblock \url{http://jgrapht.org/}.
+\newblock Accessed: 2017-01-10.
 
 \bibitem[JM09]{Jurafsky:2009:SLP:1214993}
 Daniel Jurafsky and James~H. Martin.
@@ -63,10 +83,19 @@ Gonzalo Navarro.
 \newblock A guided tour to approximate string matching.
 \newblock {\em ACM Comput. Surv.}, 33(1):31--88, March 2001.
 
+\bibitem[OMBD14]{Ojeda:2014:PDS:2721420}
+Tony Ojeda, Sean~Patrick Murphy, Benjamin Bengfort, and Abhijit Dasgupta.
+\newblock {\em Practical Data Science Cookbook}.
+\newblock Packt Publishing, 2014.
+
 \bibitem[Pag]{PageRank}
 {The Anatomy of a Large-Scale Hypertextual Web Search Engine}, howpublished =
   {\url{http://infolab.stanford.edu/~backrub/google.html}}, note = {Accessed:
   2017-01-05}.
+
+\bibitem[R-p]{R-project}
+The r project for statistical computing.
+\newblock Accessed: 2017-01-10.
 
 \bibitem[SJ99]{Santini:1999:SM:317043.317048}
 Simone Santini and Ramesh Jain.

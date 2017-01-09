@@ -312,15 +312,14 @@ The underlying idea of this algorithm is that two objects are similar if they ar
 The objects are modeled as vertices (nodes) and the relations between them as directed edges.
 This makes SimRank domain independent, applicable for every domain that can be modeled using the basic directed graph model.
 
-
-SimRank is defined as:
+Formally, SimRank is expressed in \ref{eq:simrank}.
 \begin{equation}
 	s^{SR}(x,y) = \dfrac{C}{\arrowvert I(x)\arrowvert \arrowvert I(y)\arrowvert}
 	\sum_{i=1}^{\arrowvert I(x)\arrowvert}
 	\sum_{j=1}^{\arrowvert I(y)\arrowvert}s^{SR}(I_{i}(x), I_{j}(y))
 	\label{eq:simrank}
 \end{equation}
-where $C \in [0,1]$ is a the factor of decay, $I(v)$ is the set of predecessor nodes for a given node $v$, 
+The constant $C \in [0,1]$ is a user given factor for decay, $I(v)$ is the set of predecessor nodes for a given node $v$, 
 and $\arrowvert I(v)\arrowvert$ is the size of that set.
 Dividing by the total number of predecessors pairs allows us to obtain normalized value: 
 a range between 0 (maximum dissimilarity) to 1 (same pair of nodes). 
@@ -355,23 +354,22 @@ and the edges are aggregated for both elements of the vertex pair:
 	\item[--] $V^{2} = V\times V$ are vertex pairs in $V$
 	\item[--] $E^{2}:(a,b) \rightarrow (c,d)$ in $G^{2}$ iff $a\rightarrow c$ and $b\rightarrow d$ in $G$
 \end{itemize}
-One example is given in figure \ref{fig:simrank}.
-
+Example is given in figure \ref{fig:simrank}. For the input \ref{fig:simrank1}, SimRank outputs the $G^{2}$ as showed on \ref{fig:simrank2}, using the decay factor $C=0.8$.
 
 \begin{figure}[t]
 	\begin{subfigure}{.35\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{simRank1.pdf}
 		\caption{$G$}
-		\label{fig:mcs1}
+		\label{fig:simrank1}
 	\end{subfigure}%
 	\begin{subfigure}{.65\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{simRank2.pdf}
 		\caption{$G^{2}$}
-		\label{fig:mcs2}
+		\label{fig:simrank2}
 	\end{subfigure}
-	\caption{Example of Directed Maximum Common Subgraph for input $(G_{1},G_{2})$ }
+	\caption{Example of SimRank on Directed Maximum Common Subgraph for input $(G_{1},G_{2})$ }
 	\label{fig:simrank}
 \end{figure}
 
@@ -411,10 +409,10 @@ are called \emph{strong rules}.
 \subsection{Association Rule Mining}
 
 Association rule mining is performed in two steps:
-\begin{itemize}
-	\item[1.] Frequent itemset generation i.e.\ itemsets with support $\geq minsup$
-	\item[2.] Strong rules generation from the frequent itemsets 
-\end{itemize}
+\begin{enumerate}
+	\item Frequent itemset generation i.e.\ itemsets with support $\geq minsup$
+	\item Strong rules generation from the frequent itemsets 
+\end{enumerate}
 
 \subsubsection{Generating Frequent Itemsets}
 

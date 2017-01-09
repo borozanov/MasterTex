@@ -5,49 +5,54 @@ The style file: alpha.bst
 Database file #1: resources/Bibliography.bib
 Warning--I didn't find a database entry for "Eclipse"
 Warning--I didn't find a database entry for "ElectronicsEngingeers1990"
+Warning--I didn't find a database entry for "??"
 Warning--to sort, need author or key in PageRank
+Warning--to sort, need author or key in JGraphT
+Warning--to sort, need author or key in Gephi
+Warning--to sort, need author or key in Gephi:GraphAPI
+Warning--to sort, need author or key in R-project
 Warning--can't use both author and editor fields in Champin2003
 Warning--can't use both volume and number fields in Gamma1995
 Warning--empty publisher in Gamma1995
-You've used 14 entries,
+You've used 20 entries,
             2543 wiz_defined-function locations,
-            669 strings with 7285 characters,
-and the built_in function-call counts, 5659 in all, are:
-= -- 567
-> -- 233
+            695 strings with 7893 characters,
+and the built_in function-call counts, 7350 in all, are:
+= -- 725
+> -- 303
 < -- 9
-+ -- 77
-- -- 75
-* -- 374
-:= -- 887
-add.period$ -- 43
-call.type$ -- 14
-change.case$ -- 76
-chr.to.int$ -- 14
-cite$ -- 19
-duplicate$ -- 259
-empty$ -- 447
-format.name$ -- 91
-if$ -- 1206
-int.to.chr$ -- 1
++ -- 105
+- -- 100
+* -- 480
+:= -- 1125
+add.period$ -- 59
+call.type$ -- 20
+change.case$ -- 108
+chr.to.int$ -- 19
+cite$ -- 33
+duplicate$ -- 329
+empty$ -- 605
+format.name$ -- 117
+if$ -- 1569
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 71
-num.names$ -- 39
-pop$ -- 100
+missing$ -- 24
+newline$ -- 100
+num.names$ -- 45
+pop$ -- 172
 preamble$ -- 1
-purify$ -- 96
+purify$ -- 135
 quote$ -- 0
-skip$ -- 222
+skip$ -- 273
 stack$ -- 0
-substring$ -- 297
-swap$ -- 63
+substring$ -- 345
+swap$ -- 69
 text.length$ -- 9
 text.prefix$ -- 3
 top$ -- 0
-type$ -- 84
-warning$ -- 4
-while$ -- 55
-width$ -- 18
-write$ -- 185
-(There were 6 warnings)
+type$ -- 124
+warning$ -- 8
+while$ -- 61
+width$ -- 22
+write$ -- 251
+(There were 11 warnings)

@@ -3,3 +3,73 @@
 \chapter{Realization} \label{chap:Realization}
 \minitoc\vspace{1em}
 
+The problem is realized as a two part solution using the Client-Server architecture.
+
+
+\section{Background}
+
+\subsubsection{Java Technology}
+The implementation of this project is done using Java\cite{??}.
+Java technology refers to both the programming language and the platform.
+The Java programming language is high level object oriented language\cite{Gosling:2014:JLS:2636997}, 
+which is actively developed and supported. 
+The Java Software Platform provides a system for developing application software and deploying it in a cross-platform computing environment. 
+There are several Java platforms.
+The Enterprise Edition (Java EE) platform provides an API and runtime environment for developing and running enterprise software, such as web services.
+
+\subsubsection{JGraphT}
+
+JGraphT is an open-source Java library specialized for graph-theory modelling and algorithms.It suppoerts several different types of graphs\cite{JGraphT}:
+\begin{itemize}
+	\item[--] Directed and undirected graphs
+	\item[--] Graphs with labeled, unlabeled, weighted or unweighted edges
+	\item[--] Edge multiplicity (more than one edge between two vertices)
+	\item[--] Composition of all above
+\end{itemize}
+
+The JGraphT API implements vast number of important algorithms, such as PageRank, Random Walk, graph analysis, centrality etc.
+JGraphT also provides an integration with the JGraph\footnote{\url{https://jgraph.com/}} library for elementary graph visualization.
+
+\subsubsection{Gephi}
+
+Gephi - The Open Graph Viz Platform is a open-source graph analysis tool, 
+which provides rich visualizations and advanced exploration\cite{Gephi}.
+The graphs can be of directed, undirected or mixed type\cite{Gephi:GraphAPI}.
+Gephi offers filtering of the graphs by using attributes or built-in properties, 
+such as in-degree to get more compact representation of the graph. 
+It also supports determining modularity, centrality, detecting communities and similar layering algorithms.
+Gephi is realized as a third-party tools, intended for non specialists i.e\. easy to use.
+
+\subsubsection{R}
+
+R is a language and environment for statistical computing and graphics\cite{R-project}.
+It provides support for machine learning techniques and data analysis (classification, regression, time series analysis etc.).
+The extension of the functionalities of R is done through packages.
+The main repository Cran\footnote{\url{https://cran.r-project.org/web/packages}} 
+contains 9833 packages as the time of writing (January 2017).
+
+\section{Data Analysis Stages} \label{sec:steps}
+According to \cite{Ojeda:2014:PDS:2721420}, we divided the analysis in five stages:
+\begin{enumerate}
+	\item \textbf{Data acquisition and importing}: 
+	The first step in the pipeline is to acquiring the data and import it into our system. 
+	The data can come from different sources and can exist in various formats.
+	\item \textbf{Data wrangling and manipulation}: 
+	Data is rarely in the desired format. 
+	This step includes transforming and bringing the data in more convenient format.
+	The purpose is to allow easy consumption for analysis.
+	\item \textbf{Exploratory Analysis}: 
+	The third step is to come to an understanding of the data that will be used. 
+	This includes steps like visualization, summarization of characteristics, counting etc.
+	\item \textbf{Modeling and analysis}: 
+	This step is the core of the work. 
+	Here we build and test various models for similarity, clustering and other machine learning use-cases.
+	\item \textbf{Integrating and operationalizing}: 
+	At the end of the pipeline we need to make use of the data back in a compelling form and structure,
+	both for ourselves and as a response for API requests. 
+\end{enumerate}
+
+\section{Server Side}
+The steps listed in \ref{sec:steps} are implemented on the server side.
+
+\section{Client Side}
