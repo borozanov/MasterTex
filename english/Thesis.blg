@@ -5,4 +5,6 @@ Warning--I didn't find a database entry for "Eclipse"
 Warning--I didn't find a database entry for "ElectronicsEngingeers1990"
 Warning--to sort, need author or key in PageRank
 Warning--can't use both author and editor fields in Champin2003
-(There were 4 warnings)
+Warning--can't use both volume and number fields in Gamma1995
+Warning--empty publisher in Gamma1995
+(There were 6 warnings)

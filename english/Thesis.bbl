@@ -1,4 +1,4 @@
-\begin{thebibliography}{Han05}
+\begin{thebibliography}{GHJV95}
 
 \bibitem[AS94]{Agrawal:1994:FAM:645920.672836}
 Rakesh Agrawal and Ramakrishnan Srikant.
@@ -6,6 +6,11 @@ Rakesh Agrawal and Ramakrishnan Srikant.
 \newblock In {\em Proceedings of the 20th International Conference on Very
   Large Data Bases}, VLDB '94, pages 487--499, San Francisco, CA, USA, 1994.
   Morgan Kaufmann Publishers Inc.
+
+\bibitem[AW10]{Aggarwal:2010:MMG:1738952}
+Charu~C. Aggarwal and Haixun Wang.
+\newblock {\em Managing and Mining Graph Data}.
+\newblock Springer Publishing Company, Incorporated, 1st edition, 2010.
 
 \bibitem[CN04]{Chen:2004:MLE:1316689.1316758}
 Lei Chen and Raymond Ng.
@@ -23,6 +28,12 @@ Pierre-Antoine Champin and Christine Solnon.
 Michel~Marie Deza and Elena Deza.
 \newblock {\em Encyclopedia of Distances}.
 \newblock Springer Berlin Heidelberg, 2009.
+
+\bibitem[GHJV95]{Gamma1995}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock {\em {Design Patterns}}, volume~47 of {\em Addison Wesley
+  Professional Computing Series}.
+\newblock 1995.
 
 \bibitem[Han05]{Han:2005:DMC:1076797}
 Jiawei Han.

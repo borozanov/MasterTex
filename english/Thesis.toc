@@ -1,37 +1,37 @@
 \select@language {english}
 \contentsline {subsubsection}{\nonumberline English}{i}{section*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Environment}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Methods}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Concept}{6}{section.2.3}
-\contentsline {chapter}{\numberline {3}Concept}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Background}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Graph Theory Fundamentals}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Labeled Graphs}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Node Ranking}{10}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Graph Comparison}{10}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Similarity}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Introduction}{11}{subsection.3.3.1}
-\contentsline {subsubsection}{\nonumberline Conversion from Distance to Similarity}{12}{section*.13}
-\contentsline {subsection}{\numberline {3.3.2}Example Distance and Similarity Functions Between Features}{12}{subsection.3.3.2}
-\contentsline {subsubsection}{\nonumberline Euclidean distance}{12}{section*.14}
-\contentsline {subsubsection}{\nonumberline Cosine Similarity}{12}{section*.15}
-\contentsline {subsubsection}{\nonumberline Binary Similarity}{13}{section*.16}
-\contentsline {subsubsection}{\nonumberline Hamming Distance}{13}{section*.17}
-\contentsline {subsubsection}{\nonumberline Edit Distance}{14}{section*.19}
-\contentsline {subsection}{\numberline {3.3.3}Example Distance and Similarity Functions Using Graph Structure}{15}{subsection.3.3.3}
-\contentsline {subsubsection}{\nonumberline Neighborhood Random Walk Distance}{15}{section*.21}
-\contentsline {subsubsection}{\nonumberline SimRank}{15}{section*.22}
-\contentsline {section}{\numberline {3.4}Association Rule Mining}{16}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Definition}{16}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Association Rule Interestingness}{17}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Association Rule Mining}{17}{subsection.3.4.3}
-\contentsline {subsubsection}{\nonumberline Generating Frequent Itemsets}{17}{section*.23}
-\contentsline {chapter}{\numberline {4}Realization}{19}{chapter.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{21}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future Work}{23}{section.6.1}
-\contentsline {chapter}{\numberline {A}\LaTeX \ Symbols}{25}{appendix.A}
-\contentsline {chapter}{\numberline {B}Some Other Appendix}{31}{appendix.B}
-\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.28}
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Environment}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Methods}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Concept}{4}{section.2.3}
+\contentsline {chapter}{\numberline {3}Concept}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Graph Theory Fundamentals}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Labeled Graphs}{7}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Node Ranking}{8}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Graph Comparison}{8}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Similarity}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Introduction}{9}{subsection.3.3.1}
+\contentsline {subsubsection}{\nonumberline Conversion from Distance to Similarity}{10}{section*.13}
+\contentsline {subsection}{\numberline {3.3.2}Example Distance and Similarity Functions Between Features}{10}{subsection.3.3.2}
+\contentsline {subsubsection}{\nonumberline Euclidean distance}{10}{section*.14}
+\contentsline {subsubsection}{\nonumberline Cosine Similarity}{10}{section*.15}
+\contentsline {subsubsection}{\nonumberline Binary Similarity}{11}{section*.16}
+\contentsline {subsubsection}{\nonumberline Hamming Distance}{11}{section*.17}
+\contentsline {subsubsection}{\nonumberline Edit Distance}{12}{section*.19}
+\contentsline {subsection}{\numberline {3.3.3}Example Distance and Similarity Functions Using Graph Structure}{13}{subsection.3.3.3}
+\contentsline {subsubsection}{\nonumberline Neighborhood Random Walk Distance}{13}{section*.21}
+\contentsline {subsubsection}{\nonumberline SimRank}{13}{section*.22}
+\contentsline {section}{\numberline {3.4}Association Rule Mining}{14}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Definition}{14}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Association Rule Interestingness}{15}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Association Rule Mining}{15}{subsection.3.4.3}
+\contentsline {subsubsection}{\nonumberline Generating Frequent Itemsets}{15}{section*.23}
+\contentsline {chapter}{\numberline {4}Realization}{17}{chapter.4}
+\contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{21}{section.6.1}
+\contentsline {chapter}{\numberline {A}\LaTeX \ Symbols}{23}{appendix.A}
+\contentsline {chapter}{\numberline {B}Some Other Appendix}{29}{appendix.B}
+\contentsline {chapter}{\nonumberline Bibliography}{31}{chapter*.28}
