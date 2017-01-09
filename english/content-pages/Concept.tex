@@ -373,7 +373,7 @@ Example is given in figure \ref{fig:simrank}. For the input \ref{fig:simrank1}, 
 	\label{fig:simrank}
 \end{figure}
 
-\section{Association Rule Mining}
+\section{Association Analysis}
 Association rule mining searches for recurring relationships in dataset.
 More specific, it discovers the associations and correlations among items\cite{Han:2005:DMC:1076797}.
 \subsection{Definition}
@@ -444,17 +444,6 @@ After the list of frequent itemsets is obtained, generating the strong rules is 
 		\State $k \gets 1$
 		\BState {\textbf{repeat}}:
 		\State $C_{k+1}$ \gets \textit{gencandidates(L_{k})}
-		\For each
-		
-		\endFor
-		
-	%	\BState \emph{loop}:
-	%	\If {$\textit{string}(i) = \textit{path}(j)$}
-	%	\State $j \gets j-1$.
-	%	\State $i \gets i-1$.
-	%	\State \textbf{close};
-	%	\EndIf
-	%	\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
 		\BState \textbf{until} $ $L_{k} \neq \emptyset$
 		\EndProcedure
 	\end{algorithmic}
