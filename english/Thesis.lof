@@ -9,6 +9,7 @@
 \contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Example of Directed Maximum Common Subgraph for input $(G_{1},G_{2})$ \relax }}{8}{figure.caption.12}
 \contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Hamming Distance Example\relax }}{12}{figure.caption.18}
 \contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Edit Distance Example\relax }}{13}{figure.caption.20}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Example of Directed Maximum Common Subgraph for input $(G_{1},G_{2})$ \relax }}{15}{figure.caption.23}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Realization}{17}{chapter.4}
 \addvspace {10\p@ }
@@ -17,11 +18,11 @@
 \contentsline {xchapter}{Conclusion}{21}{chapter.6}
 \addvspace {10\p@ }
 \contentsline {xchapter}{\LaTeX \ Symbols}{23}{appendix.A}
-\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces \LaTeX \ Symbols page 1 of 4\relax }}{24}{figure.caption.24}
-\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces \LaTeX \ Symbols page 2 of 4\relax }}{25}{figure.caption.25}
-\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces \LaTeX \ Symbols page 3 of 4\relax }}{26}{figure.caption.26}
-\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces \LaTeX \ Symbols page 4 of 4\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces \LaTeX \ Symbols page 1 of 4\relax }}{24}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces \LaTeX \ Symbols page 2 of 4\relax }}{25}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces \LaTeX \ Symbols page 3 of 4\relax }}{26}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces \LaTeX \ Symbols page 4 of 4\relax }}{27}{figure.caption.29}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Some Other Appendix}{29}{appendix.B}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Bibliography}{31}{chapter*.28}
+\contentsline {xchapter}{Bibliography}{31}{chapter*.30}

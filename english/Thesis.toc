@@ -27,11 +27,12 @@
 \contentsline {subsection}{\numberline {3.4.1}Definition}{14}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Association Rule Interestingness}{15}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Association Rule Mining}{15}{subsection.3.4.3}
-\contentsline {subsubsection}{\nonumberline Generating Frequent Itemsets}{15}{section*.23}
+\contentsline {subsubsection}{\nonumberline Generating Frequent Itemsets}{15}{section*.24}
+\contentsline {subsubsection}{\nonumberline Correlation Analysis}{16}{section*.25}
 \contentsline {chapter}{\numberline {4}Realization}{17}{chapter.4}
 \contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}
 \contentsline {section}{\numberline {6.1}Future Work}{21}{section.6.1}
 \contentsline {chapter}{\numberline {A}\LaTeX \ Symbols}{23}{appendix.A}
 \contentsline {chapter}{\numberline {B}Some Other Appendix}{29}{appendix.B}
-\contentsline {chapter}{\nonumberline Bibliography}{31}{chapter*.28}
+\contentsline {chapter}{\nonumberline Bibliography}{31}{chapter*.30}

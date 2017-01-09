@@ -50,6 +50,14 @@ Glen Jeh and Jennifer Widom.
 \newblock Simrank: A measure of structural-context similarity.
 \newblock In {\em In KDD}, pages 538--543, 2002.
 
+\bibitem[LTS02]{Lin:2002:CSS:646420.693806}
+Wen-Yang Lin, Ming-Cheng Tseng, and Ja-Hwung Su.
+\newblock A confidence-lift support specification for interesting associations
+  mining.
+\newblock In {\em Proceedings of the 6th Pacific-Asia Conference on Advances in
+  Knowledge Discovery and Data Mining}, PAKDD '02, pages 148--158, London, UK,
+  UK, 2002. Springer-Verlag.
+
 \bibitem[Nav01]{Navarro:2001:GTA:375360.375365}
 Gonzalo Navarro.
 \newblock A guided tour to approximate string matching.
