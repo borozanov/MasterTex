@@ -439,12 +439,30 @@ After the list of frequent itemsets is obtained, generating the strong rules is 
 \begin{algorithm}
 	\caption{Apriori}\label{}
 	\begin{algorithmic}[1]
-		\Procedure{Apriori}{T,$\epsilon$}
-			\State $L_{1} \gets \{$\textit{all 1--temsets}$\}$
-			\State $k \gets 1$
-			%\BState {\textbf{repeat}}:
-			%	\State $C_{k+1}$ \gets \textit{gencandidates(L_{k})}
-			%\BState \textbf{until} $ $L_{k} \neq \emptyset$
+		\Procedure{Apriori}{T,$minsup$}			
+			\BState $k \gets 1$
+			\BState $L_{k} \gets \{$\textit{all 1--temsets}$\}$
+			\BState {\textbf{repeat}}:
+			\State $C_{k+1}  \gets \textit{GENCANDIDATES}(L_{k})$
+			\For {\textbf{each} \textit{transaction t}}
+				\State \textit{increment the count of candidates in }$C_{k+1}$
+					   \texit{ contained in }$T$
+				\State  $L_{k+1}=\textit{candidates in }C_{k+1} \textit{with supp} \geq minsup$
+			\EndFor
+			\BState \textbf{until} $L_{k} \neq \emptyset$ \\
+			\Return $\cup_{k}L_{k}$
+		\EndProcedure
+		
+		\Procedure{gencandidates}{$L_{k}$}
+			\State $C_{k+1} \gets \textit{join}(L_{k},L_{k})$
+			\For{\textbf{all}\textit{ itemsets }$c$\textbf{ in } $C_{k+1}$}
+				\For{\textbf{all}\textit{ k--itemsets }$s$\textbf{ of } $c$}
+					\If{$s$ \textit{ not in } $L_{k}$}
+						{\textbf{ delete }$c$ \textbf{ from }$C_{k+1}$}
+					\EndIf
+				\EndFor
+			\EndFor
+			\\\Return $C_{k+1}$
 		\EndProcedure
 	\end{algorithmic}
 \end{algorithm}
