@@ -4,7 +4,8 @@
 \minitoc\vspace{1em}
 
 \section{Background}
-\todo{Intro in the concept}
+In this chapter, we will present the approaches we used for solving the problem.
+First we will focus on the fundamentals of the graph theory. Next we will introduce the notion of similarity and distance, and give some examples. We will conclude this chapter by explaining what association rules are and how to extract information from them. 
 
 \section{Graph Theory Fundamentals}
 \subsection{Labeled Graphs}
@@ -86,23 +87,15 @@ In figure \ref{fig:mcs3} the Maximum Common subgraph is shown for the graphs in 
 
 \section{Similarity}
 \subsection{Introduction}
-The concept of similarity appears in almost every scientific domain. It is defined by similarity measure based on object representations.
-Similarity measure (similarity function) is a function that quantifies how closely related are two objects. 
-In other words, by using similarity as criterion, we can evaluate the likeliness between objects. 
+The concept of similarity appears in almost every scientific domain. 
+It is defined by similarity measure (similarity function), based on object representations.
+If we consider the following spaces: $\mathds{F}$, which denotes the feature space
+and $\mathds{R} ^  \mathds{F}$ - the space of all feature representations,
+then the similarity is a mapping from the future space to a score 
+$s: \mathds{R}^{\mathds{F}} \times  \mathds{R}^{\mathds{F}} \rightarrow  \mathds{R}$.
 
-If we consider the following spaces: 
-\begin{itemize}
-	\item[--]  $\mathds{X}$ denotes the set of the data objects
-	\item[--]  $\mathds{F}$ denotes the feature space
-	\item[--]  $\mathds{R} ^  \mathds{F}$ denotes the space of all feature representations
-\end{itemize}
+In other words, by using similarity as criterion, we can evaluate the likeliness between objects by quantifying how closely related they are.
 
-then a similarity model $S:\mathds{X} \times \mathds{X} \rightarrow :\mathds{R}$ defined $\forall x,y \in \mathds{X}$ as:
-\begin{equation}
-	S(x,y) = s(f_{x},f_{y})
-\end{equation}
-
-where $f$ 
 
 Similarity function $s$ is subject to the following properties: \cite{Santini:1999:SM:317043.317048}:
 
@@ -469,7 +462,11 @@ After the list of frequent itemsets is obtained, generating the strong rules is 
 
 \subsubsection{Correlation Analysis}
 Minimum support and confidence is shown to be misleading\cite{Lin:2002:CSS:646420.693806}.To avoid this, an additional measure of correlation can be used to evaluate rules:\ $A\Rightarrow B [support, confidence, correlation]$. 
-Lift is a correlation measure based on \todo{definition}{Define Lift + equation}.
+\textbf{Lift} is a simple correlation measure which compares the likelihood of the both items belong to the same transaction versus the likelihood of the two items belonging to two different transactions\ref{eq:lift}:  
+\begin{equation}
+	lift(A,B) = \frac{P(A\cup B)}{P(A)P(B)}
+	\label{eq:lift}
+\end{equation}
 If the $lift(A,B) > 1$ then $A$ and $B$ are positively correlated,
 if the $lift(A,B) < 1$ then they are negatively correlated, 
 and if the lift value equals to 1  then they have no correlation. 
